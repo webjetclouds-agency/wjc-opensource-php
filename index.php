@@ -4,7 +4,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 use App\LanguageManager;
 
-$language = 'en'; // Set language (you can dynamically set this)
+$language = 'fr'; // Set language (you can dynamically set this)
 $langManager = new LanguageManager($language);
 
 echo $langManager->getTranslation('hello.1'); // Output: Hello

@@ -3,7 +3,7 @@
         'name' => 'webjetclouds-agency/wjc-opensource-php',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'f0a506bbf8c31218b9597d3726369f4045c213f5',
+        'reference' => '3e21b8becc3d6dd1e6aa36c5ddb77195c474411a',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -130,6 +130,15 @@
                 0 => '1.0.0 || 2.0.0 || 3.0.0',
             ),
         ),
+        'spatie/schema-org' => array(
+            'pretty_version' => '3.23.1',
+            'version' => '3.23.1.0',
+            'reference' => 'a8dc1b6fcdd06afc1ab084c3ead9b7a4c3d7a35d',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../spatie/schema-org',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'symfony/polyfill-mbstring' => array(
             'pretty_version' => 'v1.31.0',
             'version' => '1.31.0.0',
@@ -142,7 +151,7 @@
         'webjetclouds-agency/wjc-opensource-php' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'f0a506bbf8c31218b9597d3726369f4045c213f5',
+            'reference' => '3e21b8becc3d6dd1e6aa36c5ddb77195c474411a',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

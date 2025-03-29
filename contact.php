@@ -66,7 +66,7 @@ EOT;
     <label for="message">Message : <textarea name="message" id="message" rows="8" cols="20" required></textarea></label><br>
 
     <input type="hidden" name="g-recaptcha-response" id="recaptchaResponse">
-    <input type="submit" id="contactForm" value="Envoyer">
+    <input type="submit" value="Envoyer">
 </form>
 <?php if (!empty($msg)) { echo "<h2>$msg</h2>"; } ?>
 </body>
