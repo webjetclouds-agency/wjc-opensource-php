@@ -3,7 +3,7 @@
         'name' => 'webjetclouds-agency/wjc-opensource-php',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '5f4e9ba271625533216773acdadb5d47167ce8ef',
+        'reference' => 'f0a506bbf8c31218b9597d3726369f4045c213f5',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -142,7 +142,7 @@
         'webjetclouds-agency/wjc-opensource-php' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '5f4e9ba271625533216773acdadb5d47167ce8ef',
+            'reference' => 'f0a506bbf8c31218b9597d3726369f4045c213f5',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
