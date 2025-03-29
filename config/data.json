@@ -1,0 +1,47 @@
+{
+    "core": {
+        "email": "",
+        "site" : {
+            "name": ""
+        },
+        "personal":{
+            "full-name":""
+        },
+        "organisation":{
+            "name":"",
+            "address":"",
+            "region":"",
+            "city":"",
+            "country":"",
+            "legal":{
+                "taxID":"",
+                "vatID":"",
+                "number-employed":""
+            }
+        }
+    },
+    "seo": {
+        "google": {
+            "tagmanager": ""
+        }
+    },
+    "translate": {
+        "default": "fr",
+        "fr": "fr",
+        "en": "en"
+    },
+    "security": {
+        "google": {
+            "recaptcha": {
+                "v2": {
+                    "site-public": "",
+                    "site-private": ""
+                },
+                "v3": {
+                    "site-public": "",
+                    "site-private": ""
+                }
+            }
+        }
+    }
+}
