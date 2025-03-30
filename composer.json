@@ -36,6 +36,8 @@
       "ext-simplexml": "*",
       "dejurin/php-google-translate-for-free": "^1.0",
       "monolog/monolog": "^2.0",
-        "spatie/schema-org": "^3.23"
+      "spatie/schema-org": "^3.23",
+      "cocur/slugify": "^4.6",
+        "melbahja/seo": "^2.1"
     }
   }
