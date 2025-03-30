@@ -2,7 +2,9 @@
     "core": {
         "email": "",
         "site" : {
-            "name": ""
+            "name": "",
+            "url": "localhost",
+            "timezone": "Etc/UTC",
         },
         "personal":{
             "full-name":""
