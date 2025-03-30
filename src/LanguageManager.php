@@ -1,7 +1,7 @@
 <?php
 /**
  * 
- * Copyright &copy; 20250 WebjetClouds-agency
+ * Copyright &copy; 2025 WebjetClouds-agency
  * wp-webjetclouds-php translattion
  * 
  * **/
