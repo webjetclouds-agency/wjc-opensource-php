@@ -61,3 +61,21 @@ composer update && composer dump-autoload && composer cc
 - generic ODBC
 - Microsoft's ADO
 
+## On vous remercie d'avance et 
+### on remercie également au contributeur à construire ce projet facilement 
+- [Faire un dons](https://funding.webjet.cloud/donations/wp-opensource-php/)
+- [adodb](https://adodb.org/)
+- [cocur](http://cocur.co/)
+- [composer](https://getcomposer.org/)
+- [dejurin YURII D.](https://github.com/dejurin)
+- [Gargron Eugen Rochko](https://zeonfederated.com/)
+- [giggsey Joshua Gigg](http://giggsey.com/)
+- [Google](https://opensource.google/)
+- [icamys Dmitrii Prisacari](https://github.com/icamys)
+- [matthiasmullie Matthias Mullie](https://www.mullie.eu/)
+- [melbahja Mohamed El Bahja](https://mohamedelbahja.com/)
+- [monolog](https://github.com/monolog)
+- [phpmailer](https://synchromedia.co.uk)
+- [psr Peter Russell](https://github.com/psr)
+- [spatie](https://spatie.be/)
+- [symfony](https://symfony.com/)
