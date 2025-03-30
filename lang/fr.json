@@ -1,8 +1,53 @@
-{
+  {
     "hello": {
       "1": "Bonjour",
       "2": "Salut"
     },
     "goodbye": "Goodbye"
+  },
+  {
+    "email": {
+      "email": "Email",
+      "name": "Nom",
+      "subject": "Sujet",
+      "message": "Message",
+      "send": "Envoyer",
+      "error": {
+        "success": "Message envoyé ! Merci de nous avoir contactés.",
+        "failure": "Erreur lors de l’envoi du message. Veuillez réessayer plus tard.",
+        "captcha": {
+          "fail": "Vérification reCAPTCHA échouée. Veuillez réessayer.",
+          "try": "reCAPTCHA non rempli. Veuillez réessayer."
+      }
+    }
+  },
+  {
+    "home": {
+      "seo": {
+        "title": "Accueil",
+        "description": "Page d'accueil de notre site.",
+        "keywords": "accueil, page d'accueil, bienvenue"
+      }
+    },
+    "about": {
+      "seo": {
+        "title": "A propos de nous",
+        "description": "En savoir plus sur notre entreprise.",
+        "keywords": "à propos, entreprise, informations"
+      }
+    },
+    "contact": {
+      "seo": {
+        "title": "Contactez-nous",
+        "description": "Contactez-nous pour toute question ou préoccupation.",
+        "keywords": "contact, email, support, assistance"
+      }
+    },
+    "error": {
+      "seo": {
+        "title": "Erreur",
+        "description": "Une erreur s'est produite.",
+        "keywords": "erreur, problème, assistance"
+      }
+    }
   }
-  
