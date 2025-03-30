@@ -13,10 +13,12 @@ return array(
     'Psr\\Log\\' => array($vendorDir . '/psr/log/src'),
     'PHPMailer\\PHPMailer\\' => array($vendorDir . '/phpmailer/phpmailer/src'),
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
+    'Melbahja\\Seo\\' => array($vendorDir . '/melbahja/seo/src'),
     'MatthiasMullie\\PathConverter\\' => array($vendorDir . '/matthiasmullie/path-converter/src'),
     'MatthiasMullie\\Minify\\' => array($vendorDir . '/matthiasmullie/minify/src'),
     'Icamys\\SitemapGenerator\\' => array($vendorDir . '/icamys/php-sitemap-generator/src'),
     'Giggsey\\Locale\\' => array($vendorDir . '/giggsey/locale/src'),
     'Dejurin\\' => array($vendorDir . '/dejurin/php-google-translate-for-free/src'),
+    'Cocur\\Slugify\\' => array($vendorDir . '/cocur/slugify/src'),
     'App\\' => array($baseDir . '/src'),
 );
