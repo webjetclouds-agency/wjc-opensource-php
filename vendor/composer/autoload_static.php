@@ -33,6 +33,7 @@ class ComposerStaticInit2c7d9795748b50bd5141cd835ac89529
         'M' => 
         array (
             'Monolog\\' => 8,
+            'Melbahja\\Seo\\' => 13,
             'MatthiasMullie\\PathConverter\\' => 29,
             'MatthiasMullie\\Minify\\' => 22,
         ),
@@ -47,6 +48,10 @@ class ComposerStaticInit2c7d9795748b50bd5141cd835ac89529
         'D' => 
         array (
             'Dejurin\\' => 8,
+        ),
+        'C' => 
+        array (
+            'Cocur\\Slugify\\' => 14,
         ),
         'A' => 
         array (
@@ -83,6 +88,10 @@ class ComposerStaticInit2c7d9795748b50bd5141cd835ac89529
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
+        'Melbahja\\Seo\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/melbahja/seo/src',
+        ),
         'MatthiasMullie\\PathConverter\\' => 
         array (
             0 => __DIR__ . '/..' . '/matthiasmullie/path-converter/src',
@@ -103,6 +112,10 @@ class ComposerStaticInit2c7d9795748b50bd5141cd835ac89529
         array (
             0 => __DIR__ . '/..' . '/dejurin/php-google-translate-for-free/src',
         ),
+        'Cocur\\Slugify\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/cocur/slugify/src',
+        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
@@ -121,6 +134,25 @@ class ComposerStaticInit2c7d9795748b50bd5141cd835ac89529
 
     public static $classMap = array (
         'App\\LanguageManager' => __DIR__ . '/../..' . '/src/LanguageManager.php',
+        'Cocur\\Slugify\\Bridge\\Laravel\\SlugifyFacade' => __DIR__ . '/..' . '/cocur/slugify/src/Bridge/Laravel/SlugifyFacade.php',
+        'Cocur\\Slugify\\Bridge\\Laravel\\SlugifyServiceProvider' => __DIR__ . '/..' . '/cocur/slugify/src/Bridge/Laravel/SlugifyServiceProvider.php',
+        'Cocur\\Slugify\\Bridge\\Latte\\SlugifyHelper' => __DIR__ . '/..' . '/cocur/slugify/src/Bridge/Latte/SlugifyHelper.php',
+        'Cocur\\Slugify\\Bridge\\League\\SlugifyServiceProvider' => __DIR__ . '/..' . '/cocur/slugify/src/Bridge/League/SlugifyServiceProvider.php',
+        'Cocur\\Slugify\\Bridge\\Nette\\SlugifyExtension' => __DIR__ . '/..' . '/cocur/slugify/src/Bridge/Nette/SlugifyExtension.php',
+        'Cocur\\Slugify\\Bridge\\Plum\\SlugifyConverter' => __DIR__ . '/..' . '/cocur/slugify/src/Bridge/Plum/SlugifyConverter.php',
+        'Cocur\\Slugify\\Bridge\\Symfony\\CocurSlugifyBundle' => __DIR__ . '/..' . '/cocur/slugify/src/Bridge/Symfony/CocurSlugifyBundle.php',
+        'Cocur\\Slugify\\Bridge\\Symfony\\CocurSlugifyExtension' => __DIR__ . '/..' . '/cocur/slugify/src/Bridge/Symfony/CocurSlugifyExtension.php',
+        'Cocur\\Slugify\\Bridge\\Symfony\\Configuration' => __DIR__ . '/..' . '/cocur/slugify/src/Bridge/Symfony/Configuration.php',
+        'Cocur\\Slugify\\Bridge\\Twig\\SlugifyExtension' => __DIR__ . '/..' . '/cocur/slugify/src/Bridge/Twig/SlugifyExtension.php',
+        'Cocur\\Slugify\\Bridge\\ZF2\\Module' => __DIR__ . '/..' . '/cocur/slugify/src/Bridge/ZF2/Module.php',
+        'Cocur\\Slugify\\Bridge\\ZF2\\SlugifyService' => __DIR__ . '/..' . '/cocur/slugify/src/Bridge/ZF2/SlugifyService.php',
+        'Cocur\\Slugify\\Bridge\\ZF2\\SlugifyViewHelper' => __DIR__ . '/..' . '/cocur/slugify/src/Bridge/ZF2/SlugifyViewHelper.php',
+        'Cocur\\Slugify\\Bridge\\ZF2\\SlugifyViewHelperFactory' => __DIR__ . '/..' . '/cocur/slugify/src/Bridge/ZF2/SlugifyViewHelperFactory.php',
+        'Cocur\\Slugify\\RuleProvider\\DefaultRuleProvider' => __DIR__ . '/..' . '/cocur/slugify/src/RuleProvider/DefaultRuleProvider.php',
+        'Cocur\\Slugify\\RuleProvider\\FileRuleProvider' => __DIR__ . '/..' . '/cocur/slugify/src/RuleProvider/FileRuleProvider.php',
+        'Cocur\\Slugify\\RuleProvider\\RuleProviderInterface' => __DIR__ . '/..' . '/cocur/slugify/src/RuleProvider/RuleProviderInterface.php',
+        'Cocur\\Slugify\\Slugify' => __DIR__ . '/..' . '/cocur/slugify/src/Slugify.php',
+        'Cocur\\Slugify\\SlugifyInterface' => __DIR__ . '/..' . '/cocur/slugify/src/SlugifyInterface.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Dejurin\\GoogleTranslateForFree' => __DIR__ . '/..' . '/dejurin/php-google-translate-for-free/src/GoogleTranslateForFree.php',
         'FileUpload\\File' => __DIR__ . '/..' . '/gargron/fileupload/src/FileUpload/File.php',
@@ -163,6 +195,30 @@ class ComposerStaticInit2c7d9795748b50bd5141cd835ac89529
         'MatthiasMullie\\PathConverter\\Converter' => __DIR__ . '/..' . '/matthiasmullie/path-converter/src/Converter.php',
         'MatthiasMullie\\PathConverter\\ConverterInterface' => __DIR__ . '/..' . '/matthiasmullie/path-converter/src/ConverterInterface.php',
         'MatthiasMullie\\PathConverter\\NoConverter' => __DIR__ . '/..' . '/matthiasmullie/path-converter/src/NoConverter.php',
+        'Melbahja\\Seo\\Exceptions\\SeoException' => __DIR__ . '/..' . '/melbahja/seo/src/Exceptions/SeoException.php',
+        'Melbahja\\Seo\\Exceptions\\SitemapException' => __DIR__ . '/..' . '/melbahja/seo/src/Exceptions/SitemapException.php',
+        'Melbahja\\Seo\\Helper' => __DIR__ . '/..' . '/melbahja/seo/src/Helper.php',
+        'Melbahja\\Seo\\Indexing' => __DIR__ . '/..' . '/melbahja/seo/src/Indexing.php',
+        'Melbahja\\Seo\\Interfaces\\SchemaInterface' => __DIR__ . '/..' . '/melbahja/seo/src/Interfaces/SchemaInterface.php',
+        'Melbahja\\Seo\\Interfaces\\SeoInterface' => __DIR__ . '/..' . '/melbahja/seo/src/Interfaces/SeoInterface.php',
+        'Melbahja\\Seo\\Interfaces\\SitemapBuilderInterface' => __DIR__ . '/..' . '/melbahja/seo/src/Interfaces/SitemapBuilderInterface.php',
+        'Melbahja\\Seo\\Interfaces\\SitemapIndexInterface' => __DIR__ . '/..' . '/melbahja/seo/src/Interfaces/SitemapIndexInterface.php',
+        'Melbahja\\Seo\\Interfaces\\SitemapInterface' => __DIR__ . '/..' . '/melbahja/seo/src/Interfaces/SitemapInterface.php',
+        'Melbahja\\Seo\\MetaTags' => __DIR__ . '/..' . '/melbahja/seo/src/MetaTags.php',
+        'Melbahja\\Seo\\Ping' => __DIR__ . '/..' . '/melbahja/seo/src/Ping.php',
+        'Melbahja\\Seo\\Robots' => __DIR__ . '/..' . '/melbahja/seo/src/Robots.php',
+        'Melbahja\\Seo\\Schema' => __DIR__ . '/..' . '/melbahja/seo/src/Schema.php',
+        'Melbahja\\Seo\\Schema\\Thing' => __DIR__ . '/..' . '/melbahja/seo/src/Schema/Thing.php',
+        'Melbahja\\Seo\\Schema\\Things\\ContactPoint' => __DIR__ . '/..' . '/melbahja/seo/src/Schema/Things/ContactPoint.php',
+        'Melbahja\\Seo\\Schema\\Things\\Offer' => __DIR__ . '/..' . '/melbahja/seo/src/Schema/Things/Offer.php',
+        'Melbahja\\Seo\\Schema\\Things\\Organization' => __DIR__ . '/..' . '/melbahja/seo/src/Schema/Things/Organization.php',
+        'Melbahja\\Seo\\Schema\\Things\\Product' => __DIR__ . '/..' . '/melbahja/seo/src/Schema/Things/Product.php',
+        'Melbahja\\Seo\\Schema\\Things\\WebPage' => __DIR__ . '/..' . '/melbahja/seo/src/Schema/Things/WebPage.php',
+        'Melbahja\\Seo\\Sitemap' => __DIR__ . '/..' . '/melbahja/seo/src/Sitemap.php',
+        'Melbahja\\Seo\\Sitemap\\LinksBuilder' => __DIR__ . '/..' . '/melbahja/seo/src/Sitemap/LinksBuilder.php',
+        'Melbahja\\Seo\\Sitemap\\NewsBuilder' => __DIR__ . '/..' . '/melbahja/seo/src/Sitemap/NewsBuilder.php',
+        'Melbahja\\Seo\\Sitemap\\SitemapBuilder' => __DIR__ . '/..' . '/melbahja/seo/src/Sitemap/SitemapBuilder.php',
+        'Melbahja\\Seo\\Sitemap\\SitemapIndex' => __DIR__ . '/..' . '/melbahja/seo/src/Sitemap/SitemapIndex.php',
         'Monolog\\Attribute\\AsMonologProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Attribute/AsMonologProcessor.php',
         'Monolog\\DateTimeImmutable' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/DateTimeImmutable.php',
         'Monolog\\ErrorHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/ErrorHandler.php',
