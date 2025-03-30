@@ -1,57 +1,73 @@
 <?php
 
 use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+use ReCaptcha\ReCaptcha;
+use App\LanguageManager;
+
+$json_files = glob(__DIR__ . "/config/*.json");
+$json_data = json_decode(file_get_contents($json_files[0]), true);
+$langManager = new LanguageManager('fr');
+
 
 $msg = '';
 
-if (array_key_exists('email', $_POST)) {
-    date_default_timezone_set('Etc/UTC');
-    require 'vendor/autoload.php';
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['email'])) {
+    date_default_timezone_set($json_data['core']['site']['timezone']);
+    require __DIR__ . '/vendor/autoload.php'; // Correction du chemin
 
-    $recaptcha_secret = 'YOUR_SECRET_KEY';
-    $recaptcha_response = $_POST['g-recaptcha-response'];
-    $verify_url = "https://www.google.com/recaptcha/api/siteverify?secret=$recaptcha_secret&response=$recaptcha_response";
-    
-    $response = file_get_contents($verify_url);
-    $response_data = json_decode($response);
-    
-    if ($response_data->success) {
-        $mail = new PHPMailer();
-        $mail->setFrom('from@example.com', 'First Last');
+    $recaptcha_secret = $json_data['security']['google']['recaptcha']['v3']['site-private'];
+    $recaptcha_response = $_POST['g-recaptcha-response'] ?? '';
 
-        if ($mail->addReplyTo($_POST['email'], $_POST['name'])) {
-            $mail->Subject = 'PHPMailer contact form';
-            $mail->isHTML(false);
-            $mail->Body = <<<EOT
-Email: {$_POST['email']}
-Name: {$_POST['name']}
-Message: {$_POST['message']}
-Department: {$_POST['dept']}
-EOT;
-            
-            if (!$mail->send()) {
-                $msg = 'Désolé, une erreur est survenue. Veuillez réessayer plus tard.';
-            } else {
-                $msg = 'Message envoyé ! Merci de nous avoir contactés.';
+    if (!empty($recaptcha_response)) {
+        $recaptcha = new ReCaptcha($recaptcha_secret);
+        $resp = $recaptcha->verify($recaptcha_response, $_SERVER['REMOTE_ADDR']);
+
+        if ($resp->isSuccess()) {
+            try {
+                $mail = new PHPMailer(true);
+                $mail->isSMTP(); // Ajoutez votre configuration SMTP si nécessaire
+                $mail->Host = 'smtp.example.com'; // Remplacez par votre serveur SMTP
+                $mail->SMTPAuth = true;
+                $mail->Username = 'votre_email@example.com'; // Remplacez par votre identifiant SMTP
+                $mail->Password = 'votre_mot_de_passe'; // Remplacez par votre mot de passe SMTP
+                $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; 
+                $mail->Port = 587;
+
+                $mail->setFrom($json_data['core']['site']['name'], $json_data['core']['site']['name']);
+                $mail->addReplyTo(filter_var($_POST['email'], FILTER_SANITIZE_EMAIL), htmlspecialchars($_POST['name']));
+
+                $mail->Subject = $_POST['subject'];
+                $mail->isHTML(true);
+                $mail->Body = nl2br($langManager->getTranslation('email.email').": " . htmlspecialchars($_POST['email']) . "\n".$langManager->getTranslation('email.name').": " . htmlspecialchars($_POST['name']) . "\n".$langManager->getTranslation('email.message').": " . htmlspecialchars($_POST['message']));
+
+                if ($mail->send()) {
+                    $msg = $langManager->getTranslation('email.error.success');
+                } else {
+                    $msg = $langManager->getTranslation('email.error.failure');
+                }
+            } catch (Exception $e) {
+                $msg = 'Erreur PHPMailer : ' . $mail->ErrorInfo;
             }
         } else {
-            $msg = 'Adresse e-mail invalide, message ignoré.';
+            $msg = $langManager->getTranslation('email.error.captcha.fail');
         }
     } else {
-        $msg = 'Vérification reCAPTCHA échouée. Veuillez réessayer.';
+        $msg = $langManager->getTranslation('email.error.captcha.try');
     }
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Formulaire de contact</title>
-    <script src="https://www.google.com/recaptcha/api.js?render=YOUR_SITE_KEY"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render='<?php echo $json_data['security']['google']['recaptcha']['v3']['site-public']; ?>'"></script>
     <script>
         function onSubmit(event) {
             event.preventDefault();
-            grecaptcha.execute('YOUR_SITE_KEY', { action: 'submit' }).then(function(token) {
+            grecaptcha.execute('<?php echo $json_data['security']['google']['recaptcha']['v3']['site-public']; ?>', { action: 'contact' }).then(function(token) {
                 document.getElementById('recaptchaResponse').value = token;
                 document.getElementById('contactForm').submit();
             });
@@ -61,12 +77,13 @@ EOT;
 <body>
 <h1>Contactez-nous</h1>
 <form id="contactForm" method="POST" onsubmit="onSubmit(event)">
-    <label for="name">Nom : <input type="text" name="name" id="name" required></label><br>
-    <label for="email">Adresse e-mail : <input type="email" name="email" id="email" required></label><br>
-    <label for="message">Message : <textarea name="message" id="message" rows="8" cols="20" required></textarea></label><br>
+    <label for="name"><?php echo $langManager->getTranslation('email.subject'); ?> : <input type="text" name="subject" id="subject" required></label><br>
+    <label for="name"><?php echo $langManager->getTranslation('email.name'); ?> : <input type="text" name="name" id="name" required></label><br>
+    <label for="email"><?php echo $langManager->getTranslation('email.email'); ?> : <input type="email" name="email" id="email" required></label><br>
+    <label for="message"><?php echo $langManager->getTranslation('email.message'); ?> : <textarea name="message" id="message" rows="8" cols="20" required></textarea></label><br>
 
     <input type="hidden" name="g-recaptcha-response" id="recaptchaResponse">
-    <input type="submit" value="Envoyer">
+    <input type="submit" value="<?php echo $langManager->getTranslation('email.send'); ?>">
 </form>
 <?php if (!empty($msg)) { echo "<h2>$msg</h2>"; } ?>
 </body>
