@@ -3,13 +3,10 @@
 github: webjetclouds-agency # Replace with up to 4 GitHub Sponsors-enabled usernames e.g., [user1, user2]
 patreon: webjetclouds # Replace with a single Patreon username
 #open_collective: # Replace with a single Open Collective username
-#ko_fi: # Replace with a single Ko-fi username
-#tidelift: # Replace with a single Tidelift platform-name/package-name e.g., npm/babel
-#community_bridge: # Replace with a single Community Bridge project-name e.g., cloud-foundry
-#liberapay: # Replace with a single Liberapay username
-#issuehunt: # Replace with a single IssueHunt username
-#lfx_crowdfunding: # Replace with a single LFX Crowdfunding project-name e.g., cloud-foundry
-#polar: # Replace with a single Polar username
+ko_fi: webjetclouds # Replace with a single Ko-fi username
+liberapay: webjetclouds # Replace with a single Liberapay username
+issuehunt: webjetclouds # Replace with a single IssueHunt username
+polar: webjetclouds # Replace with a single Polar username
 buy_me_a_coffee: webjetclouds # Replace with a single Buy Me a Coffee username
-thanks_dev: adodb, cocur, dejurin, gargron, giggsey, google, icamys, matthiasmullie, monolog, phpmailer, psr, spatie, symfony, webjetclouds # Replace with up to 4 Thanks.dev usernames e.g., [user1, user2]
+thanks_dev: webjetclouds-agency # Replace with up to 4 Thanks.dev usernames e.g., [user1, user2]
 custom: https://funding.webjet.cloud/donations/wp-opensource-php/ # Replace with up to 4 custom sponsorship URLs e.g., ['link1', 'link2']
