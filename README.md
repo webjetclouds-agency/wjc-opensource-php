@@ -63,7 +63,7 @@ composer update && composer dump-autoload && composer cc
 
 ## On vous remercie d'avance et 
 ### on remercie également au contributeur à construire ce projet facilement 
-- [Faire un dons](https://funding.webjet.cloud/donations/wp-opensource-php/)
+- [Faire un dons Webjetclouds](https://funding.webjet.cloud/donations/wp-opensource-php/)
 - [adodb](https://adodb.org/)
 - [cocur](http://cocur.co/)
 - [composer](https://getcomposer.org/)
