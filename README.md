@@ -19,7 +19,7 @@ Et a vous de créer des automates
 vous avez plusieurs documentation et teste pour vous aidez à avancer au fur et à mesure
 
 **Etant agence web - Expertise technologie et numérique**
-J'ai changé les pré-requis d'à partir supérieur de PHP 8.0 et pour les développeurs qu'elles veulent allées plus loin une basse de donné a été installer,
+Les pré-requis à partir de PHP 8.4 (Il faut attendre que votre hébergeur doivent mettre à jours & le reste à vous de le faire!) et pour les développeurs qu'elles veulent allées plus loin une basse de donné a été installer,
 si vous n'utilisez pas du tout SQL voici la commande ci-dessous: 
 ```
 composer remove adodb/adodb-php
